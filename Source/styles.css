@@ -7,7 +7,7 @@ body {
 
 h1 {
     font-family: "Monoton", sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     margin: 0.2em;
 }
 
@@ -56,7 +56,7 @@ input[type="number"] {
 }
 
 #sizePicker button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #666;
     border: 1px solid #ddd;
     color: white;
@@ -94,8 +94,16 @@ th {
 }
 
 button {
-    margin-top: 10px;
     padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+button:hover {
+    background-color: #ccc;
 }
 
 /* Add space for row/column numbers */
@@ -108,4 +116,13 @@ button {
 .table-wrapper {
     display: flex;
     flex-direction: row;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Vertically align buttons */
+    gap: 10px; /* Add space between buttons */
+    margin-top: 10px; /* Optional: Adjust top margin */
 }
