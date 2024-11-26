@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Art Maker with Pathfinding</title>
+    <title>PixAlgoArt</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Pixel Art Maker with Pathfinding</h1>
+    <h1>PixAlgoArt</h1>
 
     <div class="container">
         <h2>Choose Grid Size</h2>
@@ -21,14 +21,15 @@
 
         <h2>Pick A Color</h2>
         <input type="color" id="colorPicker" value="#ff0000">
-
-        <button id="undoBtn">Undo Path</button>
-        <button id="undoFlowBtn">Undo Flow</button>
-        <button id="obstacleBtn">Toggle Obstacles</button>
-        <button id="visualizeFlowBtn">Visualize Flow</button>
-        <button id="findPathBtn">Find Path</button>
-        <button id="resetBtn">Reset Grid</button>
-
+        <div class="button-container">
+            <button id="undoBtn">Undo Path</button>
+            <button id="undoFlowBtn">Undo Flow</button>
+            <button id="obstacleBtn">Toggle Obstacles</button>
+            <button id="visualizeFlowBtn">Visualize Flow</button>
+            <button id="findPathBtn">Find Path</button>
+            <button id="resetBtn">Reset Grid</button>
+        </div>
+        
         <h2>Design Canvas</h2>
         <table id="pixelCanvas"></table>
 
