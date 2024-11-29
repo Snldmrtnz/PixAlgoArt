@@ -33,7 +33,7 @@ function createGrid(height, width) {
 
     for (let col = 0; col < width; col++) {
         const colHeader = document.createElement("th");
-        colHeader.innerText = col + 1;
+        colHeader.innerText = String(col + 1).padStart(2, '0'); // Padded column number
         headerRow.appendChild(colHeader);
     }
     table.appendChild(headerRow);
@@ -42,9 +42,9 @@ function createGrid(height, width) {
     for (let row = 0; row < height; row++) {
         let tr = document.createElement("tr");
         const rowHeader = document.createElement("th");
-        rowHeader.innerText = row + 1;
+        rowHeader.innerText = String(row + 1).padStart(2, '0'); // Padded row number
         tr.appendChild(rowHeader); // Add row header
-
+    
         grid.push([]);
 
         for (let col = 0; col < width; col++) {
@@ -55,7 +55,7 @@ function createGrid(height, width) {
             tr.appendChild(td);
             grid[row].push(td);
         }
-
+    
         table.appendChild(tr);
     }
 
@@ -444,9 +444,52 @@ function visualizeFlow(start, end, pathColor) {
                 }
             }
         }
-    }, 100); // Visualize at an interval (adjust this for faster/slower flow)
+
+    }, 50); // Visualize at an interval (adjust this for faster/slower flow)
+
+
+    // Function to save canvas content to a PNG file
+function saveCanvasAsImage() {
+    // Create a temporary canvas to draw the current grid
+    const tempCanvas = document.createElement("canvas");
+    const context = tempCanvas.getContext("2d");
+
+    // Get the width and height of the grid
+    const gridWidth = grid[0].length;
+    const gridHeight = grid.length;
+
+    // Set the canvas size based on grid size and cell size
+    tempCanvas.width = gridWidth * 20; // assuming each cell is 20px wide
+    tempCanvas.height = gridHeight * 20; // assuming each cell is 20px high
+
+    // Loop through the grid to draw each cell onto the canvas
+    for (let row = 0; row < gridHeight; row++) {
+        for (let col = 0; col < gridWidth; col++) {
+            const cell = grid[row][col];
+            const color = cell.style.backgroundColor || "white"; // Default to white if no color set
+            context.fillStyle = color;
+            context.fillRect(col * 20, row * 20, 20, 20); // Draw the cell
+        }
+    }
+
+    // Create a link to download the image
+    const link = document.createElement("a");
+    link.href = tempCanvas.toDataURL("image/png"); // Get the PNG data URL
+    link.download = "pixel_art.png"; // Set the filename
+
+    // Trigger the download by simulating a click
+    link.click();
 }
+
+// Add event listener for saving the image
+document.getElementById("saveBtn").addEventListener("click", saveCanvasAsImage);
+
+
+
+}
+
 
 
 // Initialize grid
 createGrid(parseInt(inputHeight.value), parseInt(inputWidth.value));
+
