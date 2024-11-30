@@ -194,7 +194,6 @@ function handleCellClick(e) {
 }
 
 // Dijkstra's algorithm to find the shortest path between start and end
-// Modified findPath function
 function findPath(start, end, pathColor) {
     let queue = [];
     let visited = new Set();
@@ -235,22 +234,23 @@ function findPath(start, end, pathColor) {
             let currentCell = current;
             while (currentCell) {
                 path.unshift(currentCell);
-                pathCells.push(currentCell); // Track the path cells
+                pathCells.push(currentCell); // Track the path cells for undo
                 currentCell = previous[`${currentCell.row}-${currentCell.col}`];
             }
 
-            // Color the path cells
+            // Color the path cells with the path color (pathColor)
             path.forEach((cell) => {
                 const cellElement = grid[cell.row][cell.col];
-                
-                // Override flow color with path color
-                cellElement.style.backgroundColor = pathColor;
-
-                // Update cell state
-                cellElement.dataset.state = "path";
+                // Only color the path cells if they are not obstacles or already part of the path
+                if (cellElement.style.backgroundColor !== pathColor) {
+                    cellElement.style.backgroundColor = pathColor; // Color path over existing flow
+                }
             });
 
-            return true; // Path found
+            // Store the path for undo (if needed)
+            paths.push(pathCells);
+
+            return true;
         }
 
         // Explore neighbors
