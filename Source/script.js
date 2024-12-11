@@ -486,6 +486,22 @@ function saveCanvasAsImage() {
 // Add event listener for saving the image
 document.getElementById("saveBtn").addEventListener("click", saveCanvasAsImage);
 
+const videoSection = document.createElement('div');
+videoSection.className = 'info-section';
+videoSection.innerHTML = `
+  <h3>Learn More About Dijkstra's Algorithm</h3>
+  <p>Dijkstra's algorithm is used to find the shortest path between two points on a grid. Watch this video to understand how it works:</p>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/EFg3u_E6eHU?si=NqCV8bbEoB9WxMAh" 
+    title="Dijkstra's Algorithm Explained" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+`;
+document.body.appendChild(videoSection);
 
 
 }
