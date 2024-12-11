@@ -10,9 +10,7 @@ Welcome to **PixAlgoArt** – a pixel art creation tool that visualizes algorith
 2. [Features](#features)
 3. [How to Use](#how-to-use)
 4. [Technologies Used](#technologies-used)
-5. [Demo](#demo)
-6. [License](#license)
-7. [Contact](#contact)
+5. [Video Explanation](#video-explanation)
 
 ---
 
