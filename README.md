@@ -1,4 +1,4 @@
-# PixAlgoArt 🌟
+# PixAlgoArt 🎮🕹️👾
 
 Welcome to **PixAlgoArt** – a pixel art creation tool that visualizes algorithms, designed to enhance your artistic experience while learning how algorithms work.
 
