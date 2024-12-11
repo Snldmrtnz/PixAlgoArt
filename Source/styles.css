@@ -1,164 +1,302 @@
-
-
 body {
-    background-image: url('478555.jpg'); /* Use your pixelated background image */
-    background-size: auto; /* Maintain the pixel look */
-    background-repeat: repeat; /* Tile the background */
-    background-position: top left;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Inter', sans-serif; 
     font-size: 16px;
-    color: #444;
+    color: #333;
+    background-color: #e8f0fe;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#main-content {
-    background-color: #ffffff; /* Solid background for the main content */
-    width: 80%; /* Adjust based on your layout */
-    margin: 20px auto; /* Center the content horizontally and add spacing */
-    padding: 20px; /* Add padding inside */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better contrast */
-    border-radius: 10px; /* Optional: Rounded corners */
-    position: relative; /* Ensure it's layered over the background */
-    z-index: 2;
-}
-.header-banner {
-    background-image: url('Blue Pixel Art Back to School Google Classroom Header.png'); /* Replace with the file path of your image */
-    background-size: cover; /* Ensure the image covers the full width */
-    background-repeat: no-repeat; /* Prevent tiling */
-    background-position: center; /* Center the image */
-    height: 400px; /* Adjust height as needed */
-    display: flex; /* Center content within the banner */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    color: white; /* Text color */
-    text-shadow: 1px 1px 2px black; /* Add shadow for contrast */
-    font-family: Arial, sans-serif; /* Font for text */
-}
+
 h1 {
-    font-family: 'Press Start 2P', cursive; /* Use Google Pixel font */
-    font-size: 60px; /* Adjust the font size */
-    color: white;
-    text-shadow: 1px 1px 0 black, 0px 0px 10px rgba(0, 0, 0, 0.8); /* Pixelated shadow effect */
-    letter-spacing: 2px; /* Adjust spacing to give it a pixel feel */
-}
-
-h2 {
-    margin: 1em 0 0.25em;
-}
-
-.obstacle {
-    background-color: #000;  /* Black color for obstacles */
-    border: 1px solid #666;  /* Optional: Border to make the obstacle visible */
+    font-family: 'Pacifico', cursive; 
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
 }
 
 .container {
-    margin: 10px auto;
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #f1f1f1;
-    box-shadow: 3px 3px 3px 0px #f1f1f1;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.grid-controls, .color-picker-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 #sizePicker {
     display: flex;
-    flex-flow: row wrap;
+    gap: 10px;
     align-items: center;
 }
 
 #sizePicker label {
-    margin: 5px 10px 5px 0;
-    font-weight: 400;
+    margin-right: 5px;
+    font-weight: 500;
 }
 
 #sizePicker input {
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
     padding: 10px;
-    border: 1px solid #666;
-    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 70px;
+    outline: none;
+    transition: border-color 0.2s;
 }
 
-input[type="number"] {
-    width: 6em;
+#sizePicker input:focus {
+    border-color: #007BFF;
 }
 
 #sizePicker button {
-    padding: 5px 10px;
-    background-color: #666;
-    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
     color: white;
-    font: inherit;
-    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #sizePicker button:hover {
-    background-color: #ccc;
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-table,
-tr,
-td {
-    border: 1px solid black;
+.color-picker-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-table {
+.color-picker-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2px;
+    display: inline-block;
+    overflow: hidden; 
+}
+
+#colorPicker {
+    border: none;
+    border-radius: 8px; 
+    padding: 10px; 
+    width: 100px; 
+    height: 40px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button#obstacleBtn {
+    background-color: #007BFF;
+    color: white;
+}
+
+button#obstacleBtn:hover {
+    background-color: #0056b3;
+}
+
+button#visualizeFlowBtn {
+    background-color: #17a2b8;
+    color: white;
+}
+
+button#visualizeFlowBtn:hover {
+    background-color: #138496;
+}
+
+button#findPathBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+button#findPathBtn:hover {
+    background-color: #218838;
+}
+
+button#undoBtn {
+    background-color: #ffc107;
+    color: #3a3a3a;
+}
+
+button#undoBtn:hover {
+    background-color: #e0a800;
+}
+
+button#undoFlowBtn {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+button#undoFlowBtn:hover {
+    background-color: #f5c6cb;
+}
+
+button#resetBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#resetBtn:hover {
+    background-color: #c82333;
+}
+
+#pixelCanvas {
     border-collapse: collapse;
     margin: 0 auto;
-}
-
-tr {
-    height: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
 }
 
 td {
     width: 20px;
     height: 20px;
-    text-align: center;
-    vertical-align: middle; /* Center text vertically */
-  }
-
-th {
-    text-align: center;
-    padding: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+td:hover {
     cursor: pointer;
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-weight: 400;
-}
-button:hover {
-    background-color: #ccc;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Add space for row/column numbers */
-.table-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+td.obstacle {
+    background-color: #000;
 }
 
-.table-wrapper {
-    display: table;
-    width: 100%;
-    height: 100%;
-    border-collapse: collapse;
+#saveBtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 10px; 
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Vertically align buttons */
-    gap: 10px; /* Add space between buttons */
-    margin-top: 10px; /* Optional: Adjust top margin */
+#saveBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.info-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.algorithm-steps, .applications {
+    margin-bottom: 20px;
+}
+
+.steps-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.applications-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.video-title {
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
