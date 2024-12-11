@@ -1,69 +1,64 @@
-# PixAlgoArt
+# PixAlgoArt 🌟
 
-**PixAlgoArt** is an innovative tool designed to assist in pixel art creation while visualizing algorithms. It allows users to explore pixel art design in an interactive way, with a particular focus on the visualization of algorithmic processes.
+Welcome to **PixAlgoArt** – a pixel art creation tool that visualizes algorithms, designed to enhance your artistic experience while learning how algorithms work.
 
-## Features
+---
 
-- **Interactive Pixel Art Creation**: Users can design pixel art with ease, utilizing simple yet powerful tools tailored to the pixel art format.
-- **Algorithm Visualization**: PixAlgoArt allows you to visualize the steps of various algorithms through pixel art, offering a fun and educational experience.
-- **Customizable Grid**: Set up grids and canvas sizes to create pixel art in various dimensions.
-- **Real-Time Updates**: Changes to pixel art or algorithm visualization appear immediately, enabling quick iterations.
+## Table of Contents 📚
 
-## Installation
+1. [About](#about)
+2. [Features](#features)
+3. [How to Use](#how-to-use)
+4. [Technologies Used](#technologies-used)
+5. [Demo](#demo)
+6. [License](#license)
+7. [Contact](#contact)
 
-To get started with PixAlgoArt, follow these steps:
+---
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/pixalgoart.git
-    ```
+## About 🤖
 
-2. Navigate to the project directory:
-    ```bash
-    cd pixalgoart
-    ```
+PixAlgoArt is an interactive platform that combines **pixel art creation** with the ability to visualize algorithms, like Dijkstra's, in real-time. Whether you're designing art or studying algorithmic concepts, PixAlgoArt provides a seamless experience to engage and learn.
 
-3. Install dependencies (if applicable):
-    - For frontend:
-      ```bash
-      npm install
-      ```
+---
 
-    - For backend (if applicable):
-      ```bash
-      pip install -r requirements.txt
-      ```
+## Features 🎨
 
-4. Run the application:
-    - For frontend:
-      ```bash
-      npm start
-      ```
+- **Dynamic Grid Size**: Choose custom grid dimensions for your pixel art.
+- **Color Picker**: Select your desired color from a color palette.
+- **Algorithm Visualization**: Visualize algorithms such as Dijkstra’s algorithm and their paths.
+- **Pathfinding**: Easily toggle obstacles and visualize paths on the grid.
+- **Undo/Reset**: Undo actions and reset the grid for a fresh start.
+- **Save Art**: Save your creations as PNG files for future use.
 
-    - For backend (if applicable):
-      ```bash
-      python app.py
-      ```
+---
 
-## Usage
+## How to Use 🛠️
 
-Once the application is running, you can start creating pixel art and experimenting with algorithm visualizations. 
+1. **Select Grid Size**: Use the form to set the grid height and width.
+2. **Choose Color**: Pick a color from the color picker to fill your pixels.
+3. **Actions**:
+   - **Visualize Flow**: See how flow is calculated in real-time.
+   - **Find Path**: Find the shortest path using Dijkstra’s algorithm.
+   - **Toggle Obstacles**: Add or remove obstacles to test pathfinding.
+   - **Undo Actions**: Undo the last change you made.
+   - **Reset Grid**: Clear the grid and start fresh.
+4. **Design Canvas**: Draw on the grid by clicking on the cells.
+5. **Save Art**: Download your creation as a PNG file by clicking "Save as PNG."
 
-1. **Pixel Art Creation**:
-   - Use the tools provided in the interface to draw and customize your pixel art.
-   - Choose different brush sizes and colors for pixel placement.
-   - Zoom in/out for precise pixel placement.
+---
 
-2. **Algorithm Visualization**:
-   - Choose an algorithm to visualize, such as pathfinding algorithms, sorting algorithms, etc.
-   - Watch as the algorithm steps are visualized through the creation of pixel art.
+## Technologies Used 🖥️
 
-## Contributing
+- **HTML5**: Structuring the web content.
+- **CSS3**: Styling for a clean and modern UI.
+- **JavaScript**: Functionality for dynamic grid generation and algorithm visualization.
+- **Dijkstra's Algorithm**: For pathfinding and flow visualization.
 
-Contributions are welcome! If you'd like to help improve PixAlgoArt, please fork the repository and submit a pull request. When contributing, please make sure to follow these guidelines:
+---
 
-1. **Bug Fixes**: Ensure that the bug fix is well-tested and includes a description of the issue.
-2. **Features**: New features should be documented and include tests where necessary.
-3. **Style**: Follow the existing code style for consistency.
+## Demo 🎥
 
-Before submitting a pull request, please make sure your code passes all tests and is thoroughly documented.
+Watch the full demo video of PixAlgoArt in action:
+
+[![Learn More About Dijkstra's Algorithm](https://img.youtube.com/vi/EFg3u_E6eHU/0.jpg)](https://www.youtube.com/watch?v=EFg3u_E6eHU)
