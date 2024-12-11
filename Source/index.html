@@ -5,58 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixAlgoArt</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="main-content">
-    <header class="header-banner">
-        
-    
-    </header>
+    <h1>PixAlgoArt</h1>
 
-    <main class="container">
-        <!-- Controls Section -->
-        <section class="controls">
-            <h2>🖌️ Design Controls</h2>
-            <form id="sizePicker" class="form-group">
-                <label for="inputHeight">Grid Height:</label>
-                <input type="number" id="inputHeight" name="height" min="1" value="10">
-                <label for="inputWidth">Grid Width:</label>
-                <input type="number" id="inputWidth" name="width" min="1" value="10">
-                <button type="submit">Resize Grid</button>
-            </form>
+    <div class="container">
+        <div class="top-controls">
+            <div class="grid-controls">
+                <h2>Choose Grid Size</h2>
+                <form id="sizePicker">
+                    <label for="inputHeight">Grid Height:</label>
+                    <input type="number" id="inputHeight" name="height" min="1" value="10">
+                    <label for="inputWidth">Grid Width:</label>
+                    <input type="number" id="inputWidth" name="width" min="1" value="10">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="color-picker-section">
+                <h2>Pick A Color</h2>
+                <div class="color-picker-container">
+                    <input type="color" id="colorPicker" value="#ff0000">
+                </div>
+            </div>            
+        </div>
 
-            <label for="colorPicker">Pick a Color:</label>
-            <input type="color" id="colorPicker" value="#ff0000">
-        </section>
-
-        <!-- Actions Section -->
-        <section class="actions">
-            <h2>🛠️ Actions</h2>
-            <div class="button-container">
-                <button id="undoBtn">Undo Path</button>
-                <button id="undoFlowBtn">Undo Flow</button>
-                <button id="obstacleBtn">Toggle Obstacles</button>
+        <div class="button-section">
+            
+            <h2>Actions</h2>
+            <div class="button-grid">
                 <button id="visualizeFlowBtn">Visualize Flow</button>
                 <button id="findPathBtn">Find Path</button>
+                <button id="obstacleBtn">Toggle Obstacles</button>
+                <button id="undoFlowBtn">Undo Flow</button>
+                <button id="undoBtn">Undo Path</button>
                 <button id="resetBtn">Reset Grid</button>
-                <button id="saveBtn">Save as PNG</button>
             </div>
-        </section>
+        </div>        
 
-        <!-- Canvas Section -->
-         <div id="design-canvvas">
-        <section class="canvas-container">
-            <h3>🖼️ Design Canvas</h3>
-            <div id="pixelCanvas" class="pixel-grid"></div>
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+        <button id="saveBtn">Save as PNG</button>        
+
+        <div class="info-section">
+            <h3 class="section-title">Learn More About Dijkstra's Algorithm</h3>
+            <p class="intro-text">Dijkstra's Algorithm is a graph search algorithm that finds the shortest path between nodes in a weighted graph.</p>
+            
+            <div class="algorithm-steps">
+                <p><strong>It works by:</strong></p>
+                <ol class="steps-list">
+                    <li>Initializing distances and visiting nodes systematically.</li>
+                    <li>Updating shortest distances to neighboring nodes.</li>
+                    <li>Finding the shortest path by tracing back from the destination.</li>
+                </ol>
+            </div>
+        
+            <div class="applications">
+                <p><strong>Applications include:</strong></p>
+                <ul class="applications-list">
+                    <li>Finding optimal routes in navigation systems.</li>
+                    <li>Pathfinding in games.</li>
+                    <li>Routing protocols in computer networks.</li>
+                </ul>
+            </div>
+        
+            <h4 class="video-title">Learn More:</h4>
+            <div class="video-container">
+                <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/EFg3u_E6eHU?si=NqCV8bbEoB9WxMAh" 
+                  title="Dijkstra's Algorithm Explained" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+            </div>
         </div>
-        </section>
-    </main>
-</div>
-    <footer>
-        <p>&copy; 2024 PixAlgoArt | Let your creativity shine in pixels!</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
