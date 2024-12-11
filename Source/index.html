@@ -53,16 +53,19 @@
             <div class="content-container">
                 <div class="left-section">
                     <p class="intro-text">
-                        Dijkstra's Algorithm is a graph search algorithm that finds the shortest path between nodes in a weighted graph.
+                        Dijkstra’s Algorithm finds the shortest path between two nodes in a graph, useful for applications like road networks or computer routing. It starts by assigning tentative distances to all nodes, setting the source node to 0 and others to infinity. The algorithm then selects the node with the smallest distance, updates its neighbors' distances if a shorter path is found, and repeats until all nodes are visited or the destination is reached.
                     </p>
+                    <p class="intro-text">
+                        The algorithm guarantees the shortest path with non-negative edge weights and works by expanding known paths and updating distances. The basic version runs in \(O(V^2)\) time but can be optimized to \(O((V + E) \log V)\) with a priority queue, making it efficient for large graphs. It doesn’t work with negative edge weights.
+                    </p>                    
                 </div>
                 <div class="right-section">
                     <div class="algorithm-steps">
                         <p>It works by:</p>
                         <ol class="steps-list">
-                            <li>Initializing distances and visiting nodes systematically.</li>
-                            <li>Updating shortest distances to neighboring nodes.</li>
-                            <li>Finding the shortest path by tracing back from the destination.</li>
+                            <li>Initializing distances and visiting nodes.</li>
+                            <li>Updating distances to neighbors.</li>
+                            <li>Tracing back from the destination to find the shortest path.</li>
                         </ol>
                     </div>
                     <div class="applications">
