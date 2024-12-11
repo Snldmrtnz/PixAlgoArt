@@ -18,7 +18,7 @@
                     <label for="inputHeight">Grid Height:</label>
                     <input type="number" id="inputHeight" name="height" min="1" value="10">
                     <label for="inputWidth">Grid Width:</label>
-                    <input type="number" id="inputWidth" name="width" min="1" value="10">
+                    <input type="number" id="inputWidth" name="width" min="1" value="25">
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -49,28 +49,33 @@
         <button id="saveBtn">Save as PNG</button>        
 
         <div class="info-section">
-            <h3 class="section-title">Learn More About Dijkstra's Algorithm</h3>
-            <p class="intro-text">Dijkstra's Algorithm is a graph search algorithm that finds the shortest path between nodes in a weighted graph.</p>
-            
-            <div class="algorithm-steps">
-                <p><strong>It works by:</strong></p>
-                <ol class="steps-list">
-                    <li>Initializing distances and visiting nodes systematically.</li>
-                    <li>Updating shortest distances to neighboring nodes.</li>
-                    <li>Finding the shortest path by tracing back from the destination.</li>
-                </ol>
+            <h2 class="section-title">Learn More About Dijkstra's Algorithm</h2>
+            <div class="content-container">
+                <div class="left-section">
+                    <p class="intro-text">
+                        Dijkstra's Algorithm is a graph search algorithm that finds the shortest path between nodes in a weighted graph.
+                    </p>
+                </div>
+                <div class="right-section">
+                    <div class="algorithm-steps">
+                        <p>It works by:</p>
+                        <ol class="steps-list">
+                            <li>Initializing distances and visiting nodes systematically.</li>
+                            <li>Updating shortest distances to neighboring nodes.</li>
+                            <li>Finding the shortest path by tracing back from the destination.</li>
+                        </ol>
+                    </div>
+                    <div class="applications">
+                        <p>Applications include:</p>
+                        <ul class="applications-list">
+                            <li>Finding optimal routes in navigation systems.</li>
+                            <li>Pathfinding in games.</li>
+                            <li>Routing protocols in computer networks.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        
-            <div class="applications">
-                <p><strong>Applications include:</strong></p>
-                <ul class="applications-list">
-                    <li>Finding optimal routes in navigation systems.</li>
-                    <li>Pathfinding in games.</li>
-                    <li>Routing protocols in computer networks.</li>
-                </ul>
-            </div>
-        
-            <h4 class="video-title">Learn More:</h4>
+            <h3 class="video-title">Learn More:</h3>
             <div class="video-container">
                 <iframe 
                   width="560" 
@@ -83,6 +88,7 @@
                 </iframe>
             </div>
         </div>
+             
     <script src="script.js"></script>
 </body>
 </html>
