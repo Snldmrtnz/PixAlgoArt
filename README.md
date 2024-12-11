@@ -57,8 +57,8 @@ PixAlgoArt is an interactive platform that combines **pixel art creation** with 
 
 ---
 
-## Demo 🎥
+## Video Explanation 🎥
 
-Watch the full demo video of PixAlgoArt in action:
+Watch the full explnation about how Dijksra's Algorithm Works:
 
 [![Learn More About Dijkstra's Algorithm](https://img.youtube.com/vi/EFg3u_E6eHU/0.jpg)](https://www.youtube.com/watch?v=EFg3u_E6eHU)
